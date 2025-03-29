@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ChoixController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+{% block content %}
+<div class="example-wrapper">
+    
+    <fieldset>
+        <form action="{{ path('app_mesure') }}" method="post">
+        <div>
+            <label> Vous êtes :</label>
+            <br>
+            <input type="radio" id="particulier" name="choix" value="particulier">
+            <label for="particulier">Particulier</label><br><br>
+            
+            <input type="radio" id="entreprise" name="choix" value="entreprise" checked>
+            <label for="entreprise">Entreprise</label><br>
+             <br>
+            <button class="Suite" type="submit">Suite</button>
+            </form>
+        </div>
+        <a href="{{ path('app_accueil') }}">Retour</a>
+    </fieldset>
+    
+
+</div>
+{% endblock %}
+{% endblock %}

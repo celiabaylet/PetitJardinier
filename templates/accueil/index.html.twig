@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+ 
+{% block title %}Hello AccueilController!{% endblock %}
+ 
+{% block stylesheets %}
+    {{ parent() }}
+   
+{% endblock %}
+ 
+{% block body %}
+    {%  block content  %}
+    <div class="example-wrapper">
+        <center>
+            <u><h1>Le P'tit j@rdinier </h1></u>
+       
+            <h2> Des professionnels à votre service</h2>
+            
+               <ul> <a href="{{ path('app_choix') }}">Obtenir un devis en ligne pour une taille de haie</a></ul>  
+               <ul> <a href="{{ path('app_login') }}">Se connecter</a></ul>
+
+               <img src="{{ asset('images/petit_jardinier.avif') }}" alt=""/>
+             
+        </center>  
+       
+    </div>
+    {% endblock %}
+{% endblock %}
+ 
+ 

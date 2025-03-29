@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes Devis{% endblock %}
+
+{% block content %}
+    <h1>Mes Devis</h1>
+    {% if devis is empty %}
+        <p>Aucun devis trouvé.</p>
+    {% else %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Numéro</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for devis in devis %}
+                    <tr>
+                        <td>{{ devis.no }}</td>
+                        <td>{{ devis.date|date('d/m/Y') }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+{% endblock %}

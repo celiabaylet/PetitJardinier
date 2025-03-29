@@ -1,0 +1,261 @@
+/* Styles généraux */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f0; /* Couleur douce, comme la lumière naturelle */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #2e7d32; /* Vert forêt */
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    color: #1b5e20; /* Vert foncé */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #66bb6a; /* Vert clair au survol */
+    text-decoration: underline;
+}
+
+/* Navigation */
+nav {
+    background-color: #1b5e20; /* Vert foncé */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #c8e6c9; /* Vert pastel */
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Boutons */
+.btn {
+    display: inline-block;
+    background-color: #388e3c; /* Vert moyen */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #66bb6a; /* Vert clair */
+}
+
+/* Sections */
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #e8f5e9; /* Vert très clair */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulaires */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input:focus, form textarea:focus, form select:focus {
+    border-color: #2e7d32; /* Vert forêt */
+    outline: none;
+    box-shadow: 0 0 5px rgba(46, 125, 50, 0.5);
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2e7d32;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #66bb6a;
+}
+
+/* Footer */
+footer {
+    background-color: #1b5e20;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #c8e6c9;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Styles pour la barre de navigation */
+nav {
+    background-color: #1b5e20; /* Vert foncé */
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    list-style: none; /* Supprime les puces */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Aligne les items horizontalement */
+    justify-content: space-between; /* Espace entre les sections */
+    align-items: center; /* Centre verticalement */
+}
+
+.navbar > li {
+    position: relative; /* Pour les sous-menus */
+    margin-right: 15px;
+}
+
+.navbar > li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar > li a:hover {
+    color: #c8e6c9; /* Vert clair */
+}
+
+/* Sous-menus */
+.dropdown-menu {
+    display: none; /* Masquer le sous-menu par défaut */
+    position: absolute;
+    background-color: #2e7d32; /* Vert forêt */
+    margin-top: 5px;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.dropdown-menu li {
+    padding: 5px 20px;
+}
+
+.dropdown-menu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #66bb6a; /* Vert clair */
+}
+
+/* Afficher le sous-menu au survol */
+.navbar > .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* User Info */
+.user-info {
+    color: #fff;
+    font-style: italic;
+    margin-right: auto; /* Aligne le texte utilisateur à gauche */
+    padding: 0 10px;
+}
+/* Conteneur pour les cases à cocher */
+.checkbox-wrapper {
+    display: flex;
+    align-items: center; /* Aligne verticalement la case à cocher et le texte */
+    margin-bottom: 10px; /* Espacement entre les éléments */
+}
+
+/* Style pour la case à cocher */
+.checkbox-wrapper .form-check-input {
+    margin-right: 10px; /* Espacement entre la case et le texte */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar li {
+    color: white !important;
+    font-weight: bold;
+}
+
+.navbar a, .dropdown {
+    color: white !important;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    background-color: #2d572c; /* Même couleur de fond que la navbar */
+}
+
+.dropdown-menu li a {
+    color: white !important;
+}

@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+ 
+{% block title %}Hello DevisController!{% endblock %}
+ 
+{% block stylesheets %}
+    {{ parent() }}
+   
+{% endblock %}
+ 
+{% block body %}
+    {%  block content  %}
+        <h2>Détails du devis</h2>
+            <ul>
+                <li><strong>Type de client :</strong> {{ choix == 'entreprise' ? 'Entreprise' : 'Particulier' }}</li>
+                <li><strong>Numéro de devis :</strong> {{ devis.no }}</li>
+                <li><strong>Date du devis :</strong> {{ devis.date|date('d/m/Y') }}</li>
+
+                {% for tailler in taillers %}
+                    <li><strong>Type de haie :</strong> {{ tailler.haie.code }}</li>
+                    <li><strong>Longueur :</strong> {{ tailler.longueur }} m</li>
+                    <li><strong>Hauteur :</strong> {{ tailler.hauteur }} m</li>
+                {% endfor %}
+
+                <li><strong>Prix total :</strong> {{ prix }} €</li>
+            </ul>
+
+        <a href="{{ path('app_accueil') }}">Retour</a>
+    {% endblock %}
+{% endblock %}
+ 
+ 
